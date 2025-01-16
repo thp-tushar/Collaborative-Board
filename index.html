@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>OpenBoard</title>
+  </head>
+  <body>
+    <div class="options-cont">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+      <img src="images/pencil-svgrepo-com.svg" class="pencil" />
+      <img src="images/eraser-svgrepo-com.svg" class="eraser" />
+      <img src="images/sticky-note-svgrepo-com.svg" class="sticky" />
+      <img src="images/undo-svgrepo-com.svg" class="undo" />
+      <img src="images/redo-svgrepo-com.svg" class="redo" />
+      <img src="images/download-svgrepo-com.svg" class="download" />
+      <img src="images/upload-svgrepo-com.svg" class="upload" />
+    </div>
+
+    <div class="pencil-tool">
+      <div class="pencil-width-cont">
+        <input type="range" min="2" max="10" value="3" class="pencil-width" />
+      </div>
+      <div class="pencil-color">
+        <div class="black pencil-color-sub"></div>
+        <div class="blue pencil-color-sub"></div>
+        <div class="red pencil-color-sub"></div>
+      </div>
+    </div>
+    <div class="eraser-tool-cont">
+      <input type="range" min="2" max="10" value="3" class="eraser-width" />
+    </div>
+
+    <canvas></canvas>
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let socket = io.connect("https://open-board-project4.onrender.com/");
+    </script>
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4311418309.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
